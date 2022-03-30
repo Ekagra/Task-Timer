@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/top"
+        >
+
+        <include layout="@layout/snippet_top"></include>
+
+    </RelativeLayout>
+
+
+
+    <ExpandableListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dividerHeight="2dp"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="10dp"
+        android:id="@+id/list"
+        >
+
+    </ExpandableListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        >
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/list"
+        android:layout_weight="30"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7170423313480206/1528180149">
+    </com.google.android.gms.ads.AdView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            >
+
+        </View>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@mipmap/add_btn"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/btn"
+        >
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
